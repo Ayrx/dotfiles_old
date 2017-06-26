@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# BUNDLE_DIR=$HOME/.vim/bundle
-BUNDLE_DIR=$HOME/test/bundle
+BUNDLE_DIR=$HOME/.vim/bundle
 
 # List of vim plugins that we want to install.
 declare -a plugins=(
