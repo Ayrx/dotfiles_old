@@ -14,8 +14,9 @@ declare -a plugins=(
     "https://github.com/Vimjas/vim-python-pep8-indent.git"
 )
 
-# Make $BUNDLE_DIR directory if it doesn't exist.
-mkdir -p "$BUNDLE_DIR"
+# Install Pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # Next, change into $BUNDLE_DIR.
 pushd "$BUNDLE_DIR"
