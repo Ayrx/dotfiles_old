@@ -2,6 +2,8 @@
 
 CWD=$(pwd)
 
+apt install curl
+
 # Run vim related configs
 ln -sf $CWD/vim/.vimrc $HOME/.vimrc
 ./vim/install_vim_plugins.sh
