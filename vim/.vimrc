@@ -59,3 +59,5 @@ let g:ctrlp_prompt_mappings = {
 			\ "PrtExit()": ["<c-c>", "<c-g>"]
 			\}
 
+" Make vim recognize .md as Markdown files.
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
