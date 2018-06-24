@@ -12,6 +12,7 @@ declare -a plugins=(
     "https://github.com/airblade/vim-gitgutter.git"
     "https://github.com/fatih/vim-go.git"
     "https://github.com/Vimjas/vim-python-pep8-indent.git"
+    "https://github.com/ekalinin/Dockerfile.vim.git"
 )
 
 # Install Pathogen
