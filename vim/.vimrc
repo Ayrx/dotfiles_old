@@ -35,6 +35,7 @@ set wildignore+=*.pyc,*/build/*,*.o
 
 " Convert tabs to 4 spaces for Python and Bash.
 au FileType python setl sw=4 sts=4 et
+au FileType javascript setl sw=4 sts=4 et
 au FileType sh setl sw=4 sts=4 et
 au FileType asm setl sw=8 sts=8 et
 
