@@ -3,8 +3,7 @@
 CWD=$(pwd)
 
 # Run vim related configs
-ln -sf $CWD/vim/.vimrc $HOME/.vimrc
-./vim/install_vim_plugins.sh
+ln -sf $CWD/vim/init.vim $HOME/.config/nvim/init.vim
 
 # Move tmux config file into place
 ln -sf $CWD/tmux/.tmux.conf $HOME/.tmux.conf
