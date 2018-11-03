@@ -23,6 +23,7 @@ set backspace=2
 set colorcolumn=80
 set updatetime=100
 set hidden
+set tabstop=4
 
 " Colors
 set background=dark
