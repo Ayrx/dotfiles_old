@@ -60,3 +60,5 @@ let g:LanguageClient_serverCommands = {
 	\ 'python': ['/usr/local/bin/pyls'],
 	\ }
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+
+autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
