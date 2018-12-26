@@ -1,3 +1,5 @@
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 call plug#begin()
 
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
