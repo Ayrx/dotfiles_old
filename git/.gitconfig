@@ -2,7 +2,7 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
 	autocrlf = input
-	excludesfile = /Users/ayrx/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = nvim
 [user]
 	email = terrycwk1994@gmail.com
