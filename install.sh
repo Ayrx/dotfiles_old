@@ -3,6 +3,11 @@
 CWD=$(pwd)
 
 # Run vim related configs
+mkdir -p $HOME/.config/nvim
+
+curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 ln -sf $CWD/vim/init.vim $HOME/.config/nvim/init.vim
 
 # Move tmux config file into place
