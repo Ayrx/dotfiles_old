@@ -11,7 +11,8 @@ Plug 'https://github.com/autozimu/LanguageClient-neovim.git', {
 	\}
 Plug 'junegunn/fzf'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'roxma/vim-tmux-clipboard'
 
 call plug#end()
 
@@ -24,6 +25,7 @@ set colorcolumn=80
 set updatetime=100
 set hidden
 set tabstop=4
+set autoread
 
 " Colors
 set background=dark
