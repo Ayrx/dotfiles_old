@@ -1,5 +1,3 @@
-let g:python3_host_prog = '/usr/local/bin/python3'
-
 call plug#begin()
 
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
@@ -64,3 +62,4 @@ let g:LanguageClient_serverCommands = {
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
 autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
+autocmd Filetype javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
