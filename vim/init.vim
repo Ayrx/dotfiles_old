@@ -69,7 +69,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 autocmd! BufWritePost init.vim,.vimrc source %
 
 " Ignore files and directories
-set wildignore+=*.pyc,*/build/*,*.o
+set wildignore+=*.pyc,*/build/*,*.o,*/node_modules/*
 
 filetype on
 filetype plugin on
