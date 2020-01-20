@@ -69,7 +69,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 autocmd! BufWritePost init.vim,.vimrc source %
 
 " Ignore files and directories
-set wildignore+=*.pyc,*/build/*,*.o,*/node_modules/*
+set wildignore+=*.pyc,*/build/*,*.o,*/node_modules/*,*/venv/*
 
 filetype on
 filetype plugin on
@@ -92,3 +92,4 @@ autocmd Filetype html setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype htmldjango setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype css setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype javascript setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd Filetype typescript setlocal tabstop=4 shiftwidth=4 expandtab
