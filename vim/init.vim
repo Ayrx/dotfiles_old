@@ -80,6 +80,8 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Configure Language Server Protocol
 let g:deoplete#enable_at_startup = 1
+let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
+
 let g:LanguageClient_serverCommands = {
     \ 'python': ['/usr/local/bin/pyls'],
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],

@@ -4,7 +4,6 @@ CWD=$(pwd)
 
 # Run vim related configs
 mkdir -p $HOME/.config/nvim
-
 ln -sf $CWD/vim/init.vim $HOME/.config/nvim/init.vim
 
 # Move tmux config file into place
