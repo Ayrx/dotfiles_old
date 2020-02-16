@@ -39,8 +39,8 @@ ln -sf $CWD/git/.gitconfig $HOME/.gitconfig
 ln -sf $CWD/git/.gitignore_global $HOME/.gitignore_global
 ln -sf $CWD/fish/config.fish $HOME/.config/fish/config.fish
 
-pyenv install 3.8.1
-pyenv virtualenv 3.8.1 neovim3
+$HOME/.pyenv/bin/pyenv install 3.8.1
+$HOME/.pyenv/bin/pyenv virtualenv 3.8.1 neovim3
 $HOME/.pyenv/versions/neovim3/bin/pip install neovim pynvim
 nvim +'PlugInstall --sync' +qall &> /dev/null
 
