@@ -3,6 +3,8 @@
 CWD=$(pwd)
 
 sudo apt-get update && sudo apt-get -y upgrade
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
 sudo apt-get install -y\
     build-essential\
     cmake\
@@ -21,6 +23,7 @@ sudo apt-get install -y\
     openjdk-8-jdk\
     fish\
     tmux\
+    curl\
 
 curl https://sh.rustup.rs -sSf | sh
 curl https://pyenv.run | bash
@@ -36,3 +39,6 @@ ln -sf $CWD/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sf $CWD/git/.gitconfig $HOME/.gitconfig
 ln -sf $CWD/git/.gitignore_global $HOME/.gitignore_global
 ln -sf $CWD/fish/config.fish $HOME/.config/fish/config.fish
+
+nvim +'PlugInstall --sync' +qall &> /dev/null
+chsh -s `which fish`
