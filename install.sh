@@ -24,6 +24,16 @@ sudo apt-get install -y\
     fish\
     tmux\
     curl\
+    zlib1g-dev\
+    libbz2-dev\
+    libreadline-dev\
+    libsqlite3-dev\
+    llvm\
+    libncurses5-dev\
+    libncursesw5-dev\
+    tk-dev\
+    liblzma-dev
+    python-openssl\
 
 curl https://sh.rustup.rs -sSf | sh
 curl https://pyenv.run | bash
@@ -33,6 +43,7 @@ mkdir -p $HOME/code
 
 # Move config files into place
 mkdir -p $HOME/.config/nvim
+mkdir -p $HOME/.config/fish
 ln -sf $CWD/vim/init.vim $HOME/.config/nvim/init.vim
 ln -sf $CWD/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sf $CWD/git/.gitconfig $HOME/.gitconfig
