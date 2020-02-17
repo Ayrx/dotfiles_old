@@ -34,6 +34,7 @@ sudo apt-get install -y\
     tk-dev\
     liblzma-dev
     python-openssl\
+    fortune\
 
 curl https://sh.rustup.rs -sSf | sh
 curl https://pyenv.run | bash
