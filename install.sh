@@ -53,7 +53,7 @@ ln -sf $CWD/fish/config.fish $HOME/.config/fish/config.fish
 
 $HOME/.pyenv/bin/pyenv install 3.8.1
 $HOME/.pyenv/bin/pyenv virtualenv 3.8.1 neovim3
-$HOME/.pyenv/versions/neovim3/bin/pip install neovim pynvim
+env PYENV_VERSION=neovim3 $HOME/.pyenv/versions/neovim3/bin/pip install neovim pynvim
 nvim +'PlugInstall --sync' +qall &> /dev/null
 
 sudo chsh -s `which fish` $USER
