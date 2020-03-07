@@ -92,3 +92,4 @@ set tabstop=4 shiftwidth=4 expandtab
 autocmd Filetype html setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype htmldjango setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype css setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 expandtab

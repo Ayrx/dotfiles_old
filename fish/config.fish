@@ -10,8 +10,6 @@ set -x RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
 # Others
 set -x PYTHONDONTWRITEBYTECODE 1
 
-~/tools/cloudflared access login https://canopy.centurioninfosec.team > /dev/null
-set -x CANOPY_CF_TOKEN (~/tools/cloudflared access token -app=https://canopy.centurioninfosec.team)
 
 # Functions
 function ara
@@ -25,6 +23,12 @@ end
 function fish_greeting
     fortune -a
 end
+
+function cf
+    ~/tools/cloudflared access login https://canopy.centurioninfosec.team > /dev/null
+    set -x CANOPY_CF_TOKEN (~/tools/cloudflared access token -app=https://canopy.centurioninfosec.team)
+end
+
 
 # Aliases
 abbr -a autochrome ~/.local/autochrome/chrome --remote-debugging-port=9222
