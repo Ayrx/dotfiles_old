@@ -9,7 +9,7 @@ set -x RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
 
 # Others
 set -x PYTHONDONTWRITEBYTECODE 1
-
+set PATH ~/tools/bin $PATH
 
 # Functions
 function ara
@@ -39,3 +39,4 @@ end
 # Aliases
 abbr -a autochrome ~/.local/autochrome/chrome --remote-debugging-port=9222
 abbr -a ssh-kali ssh root@128.199.151.198
+alias vim nvim

@@ -18,13 +18,12 @@ Plug 'https://github.com/autozimu/LanguageClient-neovim.git', {
     \ 'do': 'bash install.sh',
     \}
 Plug 'junegunn/fzf'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'souffle-lang/souffle.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -80,14 +79,11 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" Configure Language Server Protocol
-let g:deoplete#enable_at_startup = 1
-let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
+" Configure Coc
+setlocal tagfunc=CocTagFunc
 
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ }
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Configure Language Server Protocol
+let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
 
 set tabstop=4 shiftwidth=4 expandtab
 autocmd Filetype html setlocal tabstop=2 shiftwidth=2 expandtab
