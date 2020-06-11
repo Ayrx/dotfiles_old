@@ -3,6 +3,8 @@ set PATH ~/.pyenv/bin $PATH
 status --is-interactive; and source (pyenv init -|psub)
 status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
+set -x EDITOR nvim
+
 # Rust setup
 set PATH ~/.cargo/bin $PATH
 set -x RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src

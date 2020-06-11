@@ -13,10 +13,6 @@ Plug 'https://github.com/vim-airline/vim-airline-themes.git'
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'https://github.com/airblade/vim-gitgutter.git'
 Plug 'https://github.com/Vimjas/vim-python-pep8-indent.git'
-Plug 'https://github.com/autozimu/LanguageClient-neovim.git', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \}
 Plug 'junegunn/fzf'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
@@ -24,6 +20,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'souffle-lang/souffle.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
@@ -44,6 +41,7 @@ autocmd! BufWritePost init.vim,.vimrc source %
 
 " General Configurations
 syntax on
+syntax sync fromstart
 set ruler
 set number
 set backspace=2
@@ -81,6 +79,10 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Configure Coc
 setlocal tagfunc=CocTagFunc
+
+"Configure Rust
+let g:rustfmt_command = "rustfmt +stable"
+let g:rustfmt_autosave_if_config_present = 1
 
 " Configure Language Server Protocol
 let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
